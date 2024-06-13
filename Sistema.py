@@ -4,4 +4,4 @@
 #importação do módulo usuario e da classe
 from Modulos.Usuario import Usuario
 
-usuario = Usuario()
+usuario = Usuario() 

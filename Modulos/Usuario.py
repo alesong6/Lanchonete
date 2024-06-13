@@ -1,3 +1,4 @@
+from Modulos.Telas import Telas
 class Usuario:
   """ Documentação da Classe no Python
       Funções do usuário padrão da Lanchonete.
@@ -20,6 +21,10 @@ class Usuario:
   # self refere-se à instância da classe
   def __init__( self ):
 
+    #chamando a tela de entrada que está no módulo Telas.py
+    entrada = Telas() # instância da classe Telas
+    entrada.entradaSistema()
+       
     # chamando o método logar da classe
     self.logar()
 
