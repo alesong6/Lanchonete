@@ -16,14 +16,15 @@ class Usuario:
       "nomeUsuario" : "João dos Santos",
   }
 
+  tela = Telas()
 
   # Método Construtor: executado ao instanciar a classe
   # self refere-se à instância da classe
   def __init__( self ):
 
     #chamando a tela de entrada que está no módulo Telas.py
-    entrada = Telas() # instância da classe Telas
-    entrada.entradaSistema()
+    #entrada = Telas() # instância da classe Telas
+    self.tela.entradaSistema()
        
     # chamando o método logar da classe
     self.logar()
@@ -36,21 +37,30 @@ class Usuario:
     # Comparação - Condicionais - Se - if
     # senão - else - falso
 
-    if self.loginInformado == self.dadosUsuario["loginArmazenado"]:
-      self.mostraMensagens( "Bem Vindo ao Sistema" )
+    if self.loginInformado == self.dadosUsuario["loginArmazenado"] and self.senhaInformada == self.dadosUsuario["senhaArmazenada"] :
+      self.tela
+      self.tela.mensagensSistema( "Login bem sucedido" )
       self.exibirInfosUsuario()
-    else:
-      print( " Falha ao se conectar, tente novamente ")
+
+      self.tela.exibeMenu()
+
+    else:     
+      self.tela
+      self.tela.mensagensSistema( " Falha ao se conectar, tente novamente ")
+
+      self.logar()
 
   def sair( self ):
-    print( "Logout do sistema" )
-
-  def exibirInfosUsuario( self ):
-    print( " Os dados do usuário são: \n Nome: \n Login: " )
+    self.tela
+    self.tela.mensagensSistema( "Logout do sistema" )
+            
+  # def exibirInfosUsuario( self ):
+  #   self.tela
+  #   self.tela.mensagensSistema( " Os dados do usuário são: \n Nome: \n Login: " )
   
-  #exibir as mensagens enviadas pelo parámetro.  
-  def mostraMensagens(self, mensagem):
-    print( f"    -------------------- \n |  {mensagem}  | \n    -------------------- \n" )
+  # #exibir as mensagens enviadas pelo parámetro.  
+  # def mostraMensagens(self, mensagem):
+  #   print( f"    -------------------- \n |  {mensagem}  | \n    -------------------- \n" )
 
 # Uma classe convencional precisa ser Instanciada para que seus objetos possam ser usados.
 # Instanciar uma classe é colocar uma cópia ( instância ) em uma variável ( objeto )

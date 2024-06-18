@@ -43,8 +43,18 @@ class Telas:
         os.system("clear")
     else: 
       os.system("clear")
-    
-    tipoSistema = os.name
+  
+  def exibeMenu (self):
+    print( f"+------------------------------------------------------+" )
+    print( f"| Bem Vindo {usuario}                                  |" )
+    print( f"  ** Menu - Escolha uma opção:                          " )
+    print( f"| 1 - Cadastro                                         |" )
+    print( f"| 2 - Listar                                           |" )
+    print( f"+------------------------------------------------------+" )
+
+
+
+    #tipoSistema = os.name
     #switch(tipoSistema):
     #   case "nt":
     #       os.system("cls")
